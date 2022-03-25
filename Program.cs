@@ -55,6 +55,10 @@ namespace MediaLibrary
                 Console.WriteLine($"  {t}");
             }
 
+            // LINQ - First element operator
+            var FirstMovie = movieFile.Movies.First(m => m.title.StartsWith("Z", StringComparison.OrdinalIgnoreCase));
+            Console.WriteLine($"First movie that starts with letter 'Z': {FirstMovie.title}");
+
 
             Console.ForegroundColor = ConsoleColor.White;
 
